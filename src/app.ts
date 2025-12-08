@@ -5,7 +5,7 @@ import express, { Application,json } from 'express';
 import cors from 'cors';
 
 //dato sobre categoria:
-import categoriaRouter from './routes/categoria.route';
+import categoriaRouter from './routes/categorias.routes';
 
 import usuarioRouter from './routes/usuario.route';
 
