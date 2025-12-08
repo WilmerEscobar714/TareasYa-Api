@@ -1,6 +1,8 @@
 import { DataSource } from "typeorm";
 import { Usuario } from "../entities/usuario";
 import { Categorias } from "../entities/categorias";
+import { Tarea } from "../entities/tareas";        
+import { Subtarea } from "../entities/subtareas"; 
 
 console.log('AppDataSource', {
     type: 'postgres',
@@ -20,6 +22,8 @@ const AppDataSource = new DataSource({
     entities: [
         Usuario,
         Categorias,
+        Tarea,       
+        Subtarea
     ]
 });
 

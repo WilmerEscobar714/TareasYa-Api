@@ -1,5 +1,6 @@
-
-import { Entity,PrimaryGeneratedColumn,Column } from 'typeorm';
+// src/entities/categorias.ts
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'; // Añade OneToMany
+import { Tarea } from './tareas'; 
 
 @Entity('categorias')
 export class Categorias {
@@ -18,4 +19,8 @@ export class Categorias {
 
     @Column({name: 'fecha_creacion'})
     fechaCreacion: Date;
+
+    // AGREGA ESTA LÍNEA - Relación con Tareas
+    @OneToMany(() => Tarea, tarea => tarea.categoria)
+    tareas: Tarea[];
 }
