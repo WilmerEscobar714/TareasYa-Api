@@ -1,6 +1,6 @@
 
 import { Router } from 'express';
-import { verificarUsuario } from '../controllers/usuario.controller';
+import { verificarUsuario,crearUsuario,listarUsuarios  } from '../controllers/usuario.controller';
 
 const router: Router = Router();
 
@@ -10,5 +10,8 @@ const router: Router = Router();
 //PUT /{idPersona} ---> Editar Persona
 
 router.post('/verificar', verificarUsuario);
+router.post('/crear', crearUsuario);
+router.get('/', listarUsuarios);
+
 
 export default router;
